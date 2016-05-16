@@ -213,7 +213,7 @@ class ViewController: UIViewController,CLLocationManagerDelegate,MKMapViewDelega
         print(cordinate)
         
         // サークルを描く
-        let distance = CLLocationDistance(400)
+        let distance = CLLocationDistance(100)
         let circle = MKCircle(centerCoordinate: cordinate!, radius: distance)
         self.mapView.addOverlay(circle)
         
@@ -239,10 +239,18 @@ class ViewController: UIViewController,CLLocationManagerDelegate,MKMapViewDelega
         }
         else {
             let circleView = MKCircleRenderer(overlay: overlay)
-            circleView.fillColor = UIColor.greenColor()
-            circleView.alpha = 0.1
-            circleView.strokeColor = UIColor.redColor()
-            circleView.lineWidth = 1.5
+            if overlay.title! == "あああ" {
+                circleView.fillColor = UIColor.yellowColor()
+                circleView.alpha = 0.1
+                circleView.strokeColor = UIColor.blueColor()
+                circleView.lineWidth = 5.0
+            }
+            else {
+                circleView.fillColor = UIColor.greenColor()
+                circleView.alpha = 0.1
+                circleView.strokeColor = UIColor.redColor()
+                circleView.lineWidth = 1.5
+            }
             return circleView
         }
     }
@@ -269,6 +277,16 @@ class ViewController: UIViewController,CLLocationManagerDelegate,MKMapViewDelega
         // 自分の位置を常に地図の中心にする
         self.mapView.userTrackingMode = MKUserTrackingMode.FollowWithHeading
     }
+    
+    @IBAction func tapMapView(sender: AnyObject) {
+        let touch = sender as? UITapGestureRecognizer
+        let point = touch?.locationInView(self.mapView)
+        let center = self.mapView.convertPoint(point!, toCoordinateFromView: self.mapView)
+        let circle = MKCircle(centerCoordinate: center, radius: CLLocationDistance(300))
+        circle.title = "あああ"
+        self.mapView.addOverlay(circle)
+    }
+    
 }
 
 

@@ -17,10 +17,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Pzv-5P-7M3">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Pzv-5P-7M3">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="514"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="KyN-1S-mrg" appends="YES" id="SWz-Rk-pvN"/>
+                                </connections>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bff-dM-5Z1">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bff-dM-5Z1">
                                 <rect key="frame" x="138" y="530" width="45" height="30"/>
                                 <state key="normal" title="現在地"/>
                                 <connections>
@@ -29,6 +33,14 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Pzv-5P-7M3" secondAttribute="trailing" id="NCC-qE-GFL"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Bff-dM-5Z1" secondAttribute="bottom" constant="8" symbolic="YES" id="nm4-Qm-dJ7"/>
+                            <constraint firstItem="Pzv-5P-7M3" firstAttribute="centerX" secondItem="Bff-dM-5Z1" secondAttribute="centerX" id="r7i-dm-Jbr"/>
+                            <constraint firstItem="Pzv-5P-7M3" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="uDj-i3-ful"/>
+                            <constraint firstItem="Bff-dM-5Z1" firstAttribute="top" secondItem="Pzv-5P-7M3" secondAttribute="bottom" constant="16" id="uSu-tV-m4B"/>
+                            <constraint firstItem="Pzv-5P-7M3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="yD7-3x-zmJ"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
@@ -36,6 +48,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="KyN-1S-mrg" userLabel="mapViewTap">
+                    <connections>
+                        <action selector="tapMapView:" destination="BYZ-38-t0r" id="6kM-nO-Sb5"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="251" y="334"/>
         </scene>
