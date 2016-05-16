@@ -14,6 +14,8 @@
 		7FABBB601CE1FF1200613ED1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FABBB5E1CE1FF1200613ED1 /* LaunchScreen.storyboard */; };
 		7FABBB6B1CE1FF1200613ED1 /* AKB___________Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FABBB6A1CE1FF1200613ED1 /* AKB___________Tests.swift */; };
 		7FABBB761CE1FF1200613ED1 /* AKB___________UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FABBB751CE1FF1200613ED1 /* AKB___________UITests.swift */; };
+		7FABBB841CE201AD00613ED1 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FABBB831CE201AD00613ED1 /* MapKit.framework */; };
+		7FABBB861CE205DD00613ED1 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FABBB851CE205DD00613ED1 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		7FABBB711CE1FF1200613ED1 /* AKBに会いにいけるアプリUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AKBに会いにいけるアプリUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FABBB751CE1FF1200613ED1 /* AKB___________UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AKB___________UITests.swift"; sourceTree = "<group>"; };
 		7FABBB771CE1FF1200613ED1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7FABBB831CE201AD00613ED1 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		7FABBB851CE205DD00613ED1 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FABBB861CE205DD00613ED1 /* CoreLocation.framework in Frameworks */,
+				7FABBB841CE201AD00613ED1 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +83,8 @@
 		7FABBB491CE1FF1200613ED1 = {
 			isa = PBXGroup;
 			children = (
+				7FABBB851CE205DD00613ED1 /* CoreLocation.framework */,
+				7FABBB831CE201AD00613ED1 /* MapKit.framework */,
 				7FABBB541CE1FF1200613ED1 /* AKBに会いにいけるアプリ */,
 				7FABBB691CE1FF1200613ED1 /* AKBに会いにいけるアプリTests */,
 				7FABBB741CE1FF1200613ED1 /* AKBに会いにいけるアプリUITests */,
