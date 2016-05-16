@@ -14,14 +14,14 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Pzv-5P-7M3">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="608"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="514"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bff-dM-5Z1">
-                                <rect key="frame" x="165" y="617" width="45" height="30"/>
+                                <rect key="frame" x="138" y="530" width="45" height="30"/>
                                 <state key="normal" title="現在地"/>
                                 <connections>
                                     <action selector="tapNowPositionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wUw-XT-1M6"/>
@@ -30,14 +30,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="mapView" destination="Pzv-5P-7M3" id="ZqY-OW-mGb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="251.5" y="334.5"/>
+            <point key="canvasLocation" x="251" y="334"/>
         </scene>
     </scenes>
 </document>

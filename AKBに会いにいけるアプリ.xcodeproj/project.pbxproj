@@ -201,6 +201,11 @@
 				TargetAttributes = {
 					7FABBB511CE1FF1200613ED1 = {
 						CreatedOnToolsVersion = 7.3.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					7FABBB651CE1FF1200613ED1 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -490,6 +495,7 @@
 				7FABBB7C1CE1FF1200613ED1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7FABBB7D1CE1FF1200613ED1 /* Build configuration list for PBXNativeTarget "AKBに会いにいけるアプリTests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +504,7 @@
 				7FABBB7F1CE1FF1200613ED1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7FABBB801CE1FF1200613ED1 /* Build configuration list for PBXNativeTarget "AKBに会いにいけるアプリUITests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +513,7 @@
 				7FABBB821CE1FF1200613ED1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
