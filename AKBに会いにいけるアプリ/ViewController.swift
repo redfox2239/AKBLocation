@@ -65,6 +65,7 @@ class ViewController: UIViewController,CLLocationManagerDelegate,MKMapViewDelega
         self.locationManager = CLLocationManager()
         // 位置情報を取得する許可を取ります
         self.locationManager.requestAlwaysAuthorization()
+        self.locationManager.allowsBackgroundLocationUpdates = true
         
         // mapViewに現在地を表示する
         self.mapView.showsUserLocation = true
