@@ -13,8 +13,9 @@ import MapKit
 // 現在地を使いたい場合
 import CoreLocation
 
-
-class ViewController: UIViewController {
+// 現在地の相談をする準備
+// mapViewと相談する準備
+class ViewController: UIViewController,CLLocationManagerDelegate,MKMapViewDelegate {
     
     // 地図を表示してくれるだけ
     @IBOutlet weak var mapView: MKMapView!
@@ -130,7 +131,51 @@ class ViewController: UIViewController {
             // mapViewにpinを追加
             self.mapView.addAnnotation(pin)
         }
+        
+        // locationManager san to soudan suru jyunnbi sono 2
+        self.locationManager.delegate = self
+        // dorekurai ugoitara soudansuruka settei simasu
+        self.locationManager.distanceFilter = 50
+        // genzaiti keisoku wo start suru
+        self.locationManager.startUpdatingLocation()
+        
+        // mapViewと相談する準備その2
+        self.mapView.delegate = self
     }
+    
+    // locationMangager to soudann 
+    // 50m ugoitakedo dousuru?
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        // managerに今の緯度経度があります
+        let idoToKeido = manager.location?.coordinate
+        //print(idoToKeido)
+        // 現在地の周りに円を書く
+        // 円の半径を決める
+        let distance = CLLocationDistance(100)
+        // 円を書いてくれる人を用意
+        let circle = MKCircle(centerCoordinate: idoToKeido!, radius: distance)
+        // 上の円をmapView（地図）に重ねる
+        self.mapView.addOverlay(circle)
+    }
+    
+    // mapViewと相談↓
+    // overlayされたら（重ねられたら）どうする？
+    func mapView(mapView: MKMapView, rendererForOverlay overlay: MKOverlay) -> MKOverlayRenderer {
+        // 実際に円を表示してくれる人
+        let circle = MKCircleRenderer(overlay: overlay)
+        // 円の色は青
+        circle.fillColor = UIColor.blueColor()
+        // 円の枠線は赤
+        circle.strokeColor = UIColor.redColor()
+        // 円の枠線の太さ
+        circle.lineWidth = 5
+        // 円の濃さ
+        circle.alpha = 0.05
+        return circle
+    }
+    
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

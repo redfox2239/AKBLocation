@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1713" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,10 +17,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Pzv-5P-7M3">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Pzv-5P-7M3">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="608"/>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bff-dM-5Z1">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bff-dM-5Z1">
                                 <rect key="frame" x="165" y="617" width="45" height="30"/>
                                 <state key="normal" title="現在地"/>
                                 <connections>
@@ -29,6 +29,14 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Bff-dM-5Z1" secondAttribute="bottom" constant="20" symbolic="YES" id="Gc9-wI-igK"/>
+                            <constraint firstItem="Pzv-5P-7M3" firstAttribute="centerX" secondItem="Bff-dM-5Z1" secondAttribute="centerX" id="T1H-QN-Ziu"/>
+                            <constraint firstAttribute="trailing" secondItem="Pzv-5P-7M3" secondAttribute="trailing" id="kLm-RS-Aee"/>
+                            <constraint firstItem="Bff-dM-5Z1" firstAttribute="top" secondItem="Pzv-5P-7M3" secondAttribute="bottom" constant="9" id="nGd-bX-ngp"/>
+                            <constraint firstItem="Pzv-5P-7M3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="s7H-lS-UZb"/>
+                            <constraint firstItem="Pzv-5P-7M3" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="xkd-es-fnT"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
